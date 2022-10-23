@@ -1,0 +1,345 @@
+{
+  "info": {
+    "name": "Fullstack",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "add employee",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees",
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        },
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"first_name\": \"Jannette\",\n  \"last_name\": \"Doe\",\n  \"email\": \"loltest@doe.org\",\n  \"gender\": \"Female\",\n  \"salary\": 200000\n}"
+        }
+      }
+    },
+    {
+      "name": "employee list",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees",
+          "query": [{ "key": "eid", "value": "", "disabled": true }],
+          "variable": [],
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        }
+      }
+    },
+    {
+      "name": "get employee",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees",
+          "query": [
+            {
+              "key": "eid",
+              "value": "6354b2281e22240cb68dcaac",
+              "disabled": true
+            }
+          ],
+          "variable": [],
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        }
+      }
+    },
+    {
+      "name": "edit employee",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees/6354b2281e22240cb68dcaac",
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees", "6354b2281e22240cb68dcaac"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"test@doe.org\",\n  \"gender\": \"Male\",\n  \"salary\": 140000\n}"
+        }
+      }
+    },
+    {
+      "name": "delete employee",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees/?eid=6354b4922ad9181094b18376",
+          "query": [{ "key": "eid", "value": "6354b4922ad9181094b18376" }],
+          "variable": [],
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "delete employee",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees/?eid=6354b4922ad9181094b18376",
+          "query": [{ "key": "eid", "value": "6354b4922ad9181094b18376" }],
+          "variable": [],
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "Employees empty",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "localhost:8001/api/emp/employees",
+          "host": ["localhost:8001"],
+          "path": ["api", "emp", "employees"],
+          "port": "8001"
+        },
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"first_name\": \"John\",\n  last_name: \"Doe\",\n  email: \"test@doe.org\",\n  gender: \"Male\",\n  salary: 20000\n}"
+        }
+      }
+    },
+    {
+      "name": "Success Login",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/login",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "login"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"thisisatest\",\n  \"password\": \"arandompassword\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Error username",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/login",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "login"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"thisisatest\",\n  \"password\": \"arandompasswords\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Error password",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/login",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "login"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"thisisatest\",\n  \"password\": \"arandompassword!\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Success Signup",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/signup",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "signup"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"thisisatest\",\n  \"password\": \"arandompassword\",\n  \"email\": \"test@acme.org\"\n}"
+        }
+      }
+    },
+    {
+      "name": "email missing",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/signup",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "signup"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"testmaae\",\n  \"password\": \"asdasdad\"\n}"
+        }
+      }
+    },
+    {
+      "name": "password missing",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/signup",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "signup"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"testmaae\",\n  \"email\": \"test@lol.me\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Username Missing",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/signup",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "signup"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"\",\n  \"password\": \"asdasdad\",\n  \"email\": \"test@lol.me\"\n}"
+        }
+      }
+    },
+    {
+      "name": "wrong email format",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "localhost:8001/api/user/signup",
+          "host": ["localhost:8001"],
+          "path": ["api", "user", "signup"],
+          "port": "8001"
+        },
+        "header": [
+          { "key": "Accept", "value": "*/*", "disabled": true },
+          {
+            "key": "User-Agent",
+            "value": "Thunder Client (https://www.thunderclient.com)",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "options": { "raw": { "language": "json" } },
+          "raw": "{\n  \"username\": \"testmaae\",\n  \"password\": \"asdasdad\",\n  \"email\": \"test@lolme\"\n}"
+        }
+      }
+    }
+  ]
+}
